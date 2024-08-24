@@ -18,9 +18,7 @@
     align-items: center;
     flex-direction: center;
     max-width: 100%; /* Ajusta para se ajustar à tela */
-    padding: 10px 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 10px;
   }
 
   .countdown-el {
