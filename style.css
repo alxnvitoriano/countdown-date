@@ -63,12 +63,53 @@ span {
 }
 
 .hearts-container {
-  position: fixed;
+  position: fixed; /* Mantém o contêiner fixo na tela */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
+  pointer-events: none; /* Não intercepta eventos de clique e rolagem */
+  overflow: hidden; /* Garante que os corações que saem da tela não apareçam */
+  z-index: 1; /* Fica atrás dos outros conteúdos */
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  transform: rotate(-45deg);
+  opacity: 0;
+  animation: float 5s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -15px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 15px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(-45deg);
+    opacity: 0;
+  }
 }
