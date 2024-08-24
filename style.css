@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden; /* Garante que os corações não causem barras de rolagem */
+}
+
+h1,
+h2 {
+  margin: 10px 0;
+}
+
+.countdown-image {
+  max-width: 50%;
+  height: 60%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #3a3f47;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px; /* Ajuste a largura máxima do contêiner */
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.countdown-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.text {
+  font-size: 48px;
+  margin: 0;
+  background-color: #444b55;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 80px;
+  text-align: center;
+}
+
+span {
+  font-size: 18px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #b2b2b2;
+}
+
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
